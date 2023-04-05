@@ -1,13 +1,15 @@
 #list - mutable, default index = 0, ordered
 
-"""
 #Basics
+"""
 list1=[]
 print(list1, type(list))
 list2=[1,2,3,4]
 print(list2, type(list2))
+"""
 
 #List Functions
+"""
 list3=[101, 201, 301]
 print("Before Append:", list3)
 list3.append(401)
@@ -26,9 +28,9 @@ list3.pop(4)
 print("After popping 4th index:", list3)
 del list3[0]
 print("After deleting list[0]:", list3)
+"""
 
-
-#q1
+#q1. calculating number of digits and alphabets in a string.
 def func(s):
     alpha=0
     digs=0
@@ -40,7 +42,7 @@ s=input()
 print(func(s))
 
 
-#q2
+#q2. counting number of pairs in a list that add upto the target.
 def func2(arr,n):
     count=0
     for i in range(len(arr)):
@@ -52,7 +54,7 @@ arr=eval(input("enter a list: "))
 target=int(input())
 print(func2(arr, target))
 
-
+#q3.
 def func3(str):
     if(len(str)<2): return -1
     elif(len(str)==2): return str*2
@@ -61,7 +63,7 @@ def func3(str):
 s=input()
 print(func3(s))
 
-
+#q4
 def func4(str):
     if len(str)<3: return str
     elif(str[-3:] == "ing"): return str+"ly"
@@ -69,16 +71,15 @@ def func4(str):
 s=input()
 print(func4(s))
 
-
+#q5
 def check_double(num):
     doub = num*2
     if (len(str(num)) == len(str(doub)) and set(str(num)) == set(str(doub))):
         return True
     return False
 print(check_double(125874))
-12 18 25 24 2 5 18 20 20 21
 
-
+#q6
 def find_more_than_avg(marks):
     totm = sum(marks)
     avgm = totm/10
@@ -87,19 +88,21 @@ def find_more_than_avg(marks):
         if i> avgm: stu+=1
     return (stu/10)*100
 print(find_more_than_avg((12, 18, 25, 24, 2, 5, 18, 20, 20, 21)))
+
 def generate_freq(marks):
     l=[]
     for i in range(26):
         l.append(marks.count(i))
     return l
 print(generate_freq((12, 18, 25, 24, 2, 5, 18, 20, 20, 21)))
+
 def sort_marks(marks):
     marks=list(marks)
     marks.sort()
     return marks
 print(sort_marks((12, 18, 25, 24, 2, 5, 18, 20, 20, 21)))
 
-
+#q7
 def translate(dict, ewords):
     trans=[]
     for i in ewords.split():
@@ -129,9 +132,8 @@ def subarray(n1, n2):
 n1=int(input())
 n2=int(input())
 print(subarray(n1,n2))
-"""
 
-"""same as above"""
+# same as above
 # a = int(input())
 # b = int(input())
 # arr= [i for i in range(a,b+1)]
@@ -142,15 +144,3 @@ print(subarray(n1,n2))
 #     if sum(i) % 2 == 0:
 #        c+=1
 #print(c)
-
-hike=int(input())
-sal=int(input())
-if hike==3:
-    print(int(sal+(sal*0.15)))
-elif hike==4:
-    print(sal+(sal*0.07))
-elif hike==5:
-    print(sal+(sal*0.05))
-else:
-    print(sal)
-

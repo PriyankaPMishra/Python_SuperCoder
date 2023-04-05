@@ -34,6 +34,8 @@ if e>p and e>o: print(d['E'])
 if o>p and o>e: print(d['O'])
 """
 
+#q3. finding common in 2 string
+"""
 s1=input()
 s2=input()
 s=""
@@ -41,3 +43,4 @@ for i in s1 :
     if i in s2  and i!=' ':
         s+=i
 print(s)
+"""
